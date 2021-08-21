@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 :root {
-    --primary-color: rgba(245, 64, 45, 0.9);
+    --primary-color: #EE4D2D;
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
-    --border-color: #dbdbdb
+    --border-color: #dbdbdb;
+    --navbar-height: 32px;
+    --header-height: 120px;
+    --search-height: calc(var(--header-height) - var(--navbar-height));
 }
 
 * {
@@ -33,6 +36,9 @@ html {
     flex-wrap: wrap;
 }
 
+
+/* Animation */
+
 @keyframes fade-in {
     from {
         opacity: 0;
@@ -53,6 +59,15 @@ html {
     }
 }
 
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
 
 /* Modal */
 
@@ -63,6 +78,7 @@ html {
     right: 0;
     left: 0;
     bottom: 0;
+    animation: fade-in ease 0.2s;
 }
 
 .modal__overlay {
@@ -73,9 +89,12 @@ html {
 }
 
 .modal__body {
+    --growth-from: 0.7;
+    --growth-to: 1;
     margin: auto;
     position: relative;
     z-index: 1;
+    animation: growth linear 0.2s;
 }
 
 
