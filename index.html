@@ -46,7 +46,7 @@
                         </li>
                         <li class="navbar__list-item">
                             <span class="navbar__list-item--no-pointer">Kết nối</span>
-                            <a href="" class="navbar__list-item-icon">
+                            <a href="" class="navbar__list-item-icon navbar__list-item--ml">
                                 <i class="navbar__list-icon fab fa-facebook"></i>
                             </a>
                             <a href="" class="navbar__list-item-icon">
@@ -73,8 +73,27 @@
                             <a href="" class="navbar__list-item-link">
                                 <i class="navbar__list-icon far fa-question-circle"></i> Hỗ trợ</a>
                         </li>
-                        <li class="navbar__list-item navbar__list-item--separate navbar_list-item--align">Đăng kí</li>
-                        <li class="navbar__list-item navbar_list-item--align">Đăng nhập</li>
+                        <!-- <li class="navbar__list-item navbar__list-item--separate">Đăng kí</li>
+                        <li class="navbar__list-item">Đăng nhập</li> -->
+                        <li class="navbar__list-item navbar__user">
+                            <img src="https://image.lag.vn/upload/news/21/08/16/238327265_2974772089510855_780789921481431806_n_OUGD.jpg"
+                                alt="" class="navbar__user-img">
+                            <span class="navbar__user-name">Hoang Nam</span>
+                            <ul class="navbar__user-menu">
+                                <li class="navbar__user-item">
+                                    <a href="">Tài khoản của tôi</a>
+                                </li>
+                                <li class="navbar__user-item">
+                                    <a href="">Địa chỉ của tôi</a>
+                                </li>
+                                <li class="navbar__user-item">
+                                    <a href="">Đơn mua</a>
+                                </li>
+                                <li class="navbar__user-item">
+                                    <a href="">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <!-- Header Search -->
@@ -133,6 +152,7 @@
                             <i class="hearder__cart-icon fas fa-shopping-cart"></i>
                             <span class="header__cart-notice">3</span>
                             <div class="header_cart-list">
+                                <!-- No product -->
                                 <img src="/assets/img/no_cart.png" alt="" class="header_cart-list-img">
                                 <span class="header_cart-list--no-cart-msg">Chưa có sản phẩm</span>
                                 <!-- product added -->
@@ -205,7 +225,66 @@
 
         <!-- Content -->
         <div class="container">
+            <div class="grid">
+                <div class="grid__row content">
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="category__heading-icon fas fa-list"></i>
+                                Danh mục
+                            </h3>
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a href="" class="category-item__link">Mô hình nhân vật</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="category-item__link">Bộ sưu tập</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="category-item__link">Tượng tĩnh</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
 
+                    <div class="grid__column-10">
+                        <div class="home-filter">
+                            <span class="home-filter__label">Sắp xếp theo</span>
+                            <button class="home-filter__btn btn">Phổ biến</button>
+                            <button class="home-filter__btn btn btn--primary">Mới nhất</button>
+                            <button class="home-filter__btn btn">Bán chạy</button>
+                            <div class="select-input">
+                                <span class="select-input__select">Giá</span>
+                                <i class="select-input__icon fas fa-angle-down"></i>
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: Thấp đến Cao</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: Cao đến Thấp</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">
+                                    <span class="home-filter__page-current">1</span>
+                                    /14
+                                </span>
+                                <div class="home-filter__page-control">
+                                    <a href="" class="home-filter__page-button home-filter__page-button--disable">
+                                        <i class="home-filter__page-icon fas fa-angle-left"></i>
+                                    </a>
+                                    <a href="" class="home-filter__page-button">
+                                        <i class="home-filter__page-icon fas fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Footer -->
         <footer class="footer"></footer>
