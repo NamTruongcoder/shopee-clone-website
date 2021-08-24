@@ -131,63 +131,6 @@ html {
   color: var(--white-color);
   background-color: var(--primary-color);
 }
-/* app container */
-.container {
-  background-color: #f5f5f5;
-}
-.category {
-  background-color: var(--white-color);
-  border-radius: 2px;
-}
-.category__heading {
-  font-size: 1.7rem;
-  color: var(--text-color);
-  margin-top: 0;
-  padding: 12px 16px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-.category__heading-icon {
-  font-size: 1.5rem;
-  margin-right: 4px;
-  position: relative;
-  top: -1px;
-}
-.category-list {
-  padding: 0 0 8px 0;
-  list-style: none;
-  margin-left: 9px;
-}
-
-.category-item--active .category-item__link {
-  color: var(--primary-color);
-}
-.category-item--active .category-item__link::before {
-  content: "";
-  position: absolute;
-  border-width: 4px;
-  border-style: solid;
-  border-color: transparent transparent transparent var(--primary-color);
-  top: 50%;
-  transform: translateY(-50%);
-  left: 8px;
-}
-.category-item__link {
-  position: relative;
-  text-decoration: none;
-  color: var(--text-color);
-  font-size: 1.6rem;
-  padding: 8px 16px;
-  display: block;
-  right: 0;
-  transition: right linear 0.1s;
-}
-.category-item__link:hover {
-  color: var(--primary-color);
-  right: -4px;
-}
-.content {
-  padding-top: 36px;
-}
 /* Selection */
 .select-input {
   height: 34px;
@@ -241,4 +184,35 @@ html {
 }
 .select-input__link:hover {
   color: var(--primary-color);
+}
+/* Pagination */
+.pagination {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.pagination-item {
+  margin: 0 12px;
+}
+.pagination-item__link {
+  --height: 30px;
+  display: block;
+  color: #939393;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 300;
+  height: var(--height);
+  min-width: 40px;
+  text-align: center;
+  line-height: var(--height);
+  border-radius: 2px;
+}
+.pagination-item--active .pagination-item__link:hover {
+  background-color: #ed5c3f;
+}
+.pagination-item--active .pagination-item__link {
+  color: var(--white-color);
+  background-color: var(--primary-color);
 }
